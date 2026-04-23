@@ -1,0 +1,6 @@
+# https://securitytxt.org/
+
+Please report any security issue or danger to the community to:
+- https://github.com/Yvem/minisite--dev-mental-models/issues
+
+Thanks for your contribution!
