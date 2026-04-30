@@ -3,113 +3,111 @@
 
 <!-- maximum language hints to prevent Chrome from incorrectly suggesting a translation -->
 <html lang="en" xml:lang="en">
-<head>
-	<!-- https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md#the-order-of-the-title-and-meta-tags -->
-	<meta charset="utf-8"/>
-	<meta name="format-detection" content="telephone=no"/>
-	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=contain"/>
-	<meta http-equiv="content-language" content="en"/>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-	<meta http-equiv="generator" content="@offirmo/generator--website-entry-points"/>
-	<meta http-equiv="theme-color" content="#e5d8bd"/>
-	<link
-		rel="icon"
-		href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g id='layer-auto'><text y='.9em' font-size='90'>💡</text></g></svg>"
-	/>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300..800&display=swap" rel="stylesheet">
+	<head>
+		<!-- https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md#the-order-of-the-title-and-meta-tags -->
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=contain" />
+		<meta http-equiv="content-language" content="en" />
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="generator" content="@offirmo/generator--website-entry-points" />
+		<meta http-equiv="theme-color" content="#e5d8bd" />
+		<link
+			rel="icon"
+			href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g id='layer-auto'><text y='.9em' font-size='90'>💡</text></g></svg>"
+		/>
 
-	<title>Mental Models Dev</title>
+		<title>Mental Models Dev</title>
 
-	<style>
-		/******* critical CSS https://www.smashingmagazine.com/2015/08/understanding-critical-css/ */
-		/* define namespaces for usage in following CSS, needs to be at the top https://github.com/parcel-bundler/parcel/issues/9534 */
-		@namespace svg url(http://www.w3.org/2000/svg);
-		/* define layers order, needs to be at the top to properly enforce the intended order */
-		@layer offirmo--reset, offirmo--foundation, offirmo--framework;
-
-		/* apply a natural box layout model to all elements
-		 * https://www.paulirish.com/2012/box-sizing-border-box-ftw/
-		 * https://github.com/mike-engel/a11y-css-reset/pull/12#issuecomment-516582884
-		 */
-		:root {
-			box-sizing: border-box;
-		}
-
-		*, *::before, *::after {
-			box-sizing: inherit;
-		}
-
-		/* critical minimal design system */
-		:root {
-			/* FG+BG colors are the basics of identity */
-			--o⋄color⁚bg--main: white;
-			--o⋄color⁚fg--main: black;
-			/* https://systemfontstack.com/ simplified */
-			--o⋄font-family--system--sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-
-			margin: 0;
-			padding: 0;
-
-			color: var(--o⋄color⁚fg--main);
-			background-color: var(--o⋄color⁚bg--main);
-			font-family: var(--o⋄font-family--system--sans);
-		}
-	</style>
-
-	<script>
-		/////// critical JS ///////
-		;(function normalize_trailing_slash() {
-			const trailing_segment = location.pathname.split('/').at(-1) || ''
-			if (!trailing_segment) {
-				return
+		<style>
+			/******* critical CSS https://www.smashingmagazine.com/2015/08/understanding-critical-css/ */
+			/* define namespaces for usage in following CSS, needs to be at the top https://github.com/parcel-bundler/parcel/issues/9534 */
+			@namespace svg url(http://www.w3.org/2000/svg);
+			/* define layers order, needs to be at the top to properly enforce the intended order */
+			@layer offirmo--reset, offirmo--foundation, offirmo--framework;
+			/* apply a natural box layout model to all elements
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://github.com/mike-engel/a11y-css-reset/pull/12#issuecomment-516582884
+ */
+			:root {
+				box-sizing: border-box;
 			}
-			const is_trailing_segment_a_html_file =
-				trailing_segment.endsWith('.html') || trailing_segment.endsWith('.htm')
-			if (is_trailing_segment_a_html_file) {
-				return
+			*,
+			*::before,
+			*::after {
+				box-sizing: inherit;
 			}
-			const locationᐧpathnameⵧfixed = location.pathname + '/'
-			history.replaceState(null, '', location.origin + locationᐧpathnameⵧfixed + location.search + location.hash)
-		})()
-		// for parcel serve which defaults every non-matching path to /index.html
-		if (location.hostname === 'localhost') {
-			;(function redirect_extensionless_known_pathes() {
-				if (location.redirect_pending) return
-				const pathname_without_leading_and_trailing_slash = location.pathname
-					.split('/')
-					.filter(s => !!s)
-					.join('/')
-				const trailing_path_segment = pathname_without_leading_and_trailing_slash.split('/').at(-1) || ''
-				if (!trailing_path_segment) {
+			/* critical minimal design system */
+			:root {
+				/* FG+BG colors are the basics of identity */
+				--o⋄color⁚bg--main: white;
+				--o⋄color⁚fg--main: black;
+				/* https://systemfontstack.com/ simplified */
+				--o⋄font-family--system--sans:
+					ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+
+				margin: 0;
+				padding: 0;
+
+				color: var(--o⋄color⁚fg--main);
+				background-color: var(--o⋄color⁚bg--main);
+				font-family: var(--o⋄font-family--system--sans);
+			}
+		</style>
+
+		<script>
+			/////// critical JS ///////
+			;(function normalize_trailing_slash() {
+				const trailing_segment = location.pathname.split('/').at(-1) || ''
+				if (!trailing_segment) {
 					return
 				}
-				const has_trailing_segment_an_extension = trailing_path_segment.split('.').length > 1
-				if (has_trailing_segment_an_extension) {
+				const is_trailing_segment_a_html_file =
+					trailing_segment.endsWith('.html') || trailing_segment.endsWith('.htm')
+				if (is_trailing_segment_a_html_file) {
 					return
 				}
-				const locationᐧpathnameⵧfixed = '/' + pathname_without_leading_and_trailing_slash + '.html'
-				console.log('redirect_extensionless_known_pathes() REDIRECTING\u2026')
-				location.redirect_pending = true
-				location.replace(location.origin + locationᐧpathnameⵧfixed + location.search + location.hash)
+				const locationᐧpathnameⵧfixed = location.pathname + '/'
+				history.replaceState(null, '', location.origin + locationᐧpathnameⵧfixed + location.search + location.hash)
 			})()
-		}
-	</script>
-  <script type="module" crossorigin src="./assets/index-Bvzx5yWb.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-6SIgKEEp.css">
-</head>
+			// for parcel serve which defaults every non-matching path to /index.html
+			if (location.hostname === 'localhost') {
+				;(function redirect_extensionless_known_pathes() {
+					if (location.redirect_pending) return
+					const pathname_without_leading_and_trailing_slash = location.pathname
+						.split('/')
+						.filter(s => !!s)
+						.join('/')
+					const trailing_path_segment = pathname_without_leading_and_trailing_slash.split('/').at(-1) || ''
+					if (!trailing_path_segment) {
+						return
+					}
+					const has_trailing_segment_an_extension = trailing_path_segment.split('.').length > 1
+					if (has_trailing_segment_an_extension) {
+						return
+					}
+					const locationᐧpathnameⵧfixed = '/' + pathname_without_leading_and_trailing_slash + '.html'
+					console.log('redirect_extensionless_known_pathes() REDIRECTING\u2026')
+					location.redirect_pending = true
+					location.replace(location.origin + locationᐧpathnameⵧfixed + location.search + location.hash)
+				})()
+			}
+		</script>
+		<script type="module" crossorigin src="./assets/index-GeeO40PA.js"></script>
+		<link rel="modulepreload" crossorigin href="./assets/src-CzcW9V64.js">
+		<link rel="stylesheet" crossorigin href="./assets/src-DStiy9vI.css">
+		<link rel="stylesheet" crossorigin href="./assets/index-Bb-T-u53.css">
+	</head>
 
-<body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<main id="react-root">
-	<!-- React will render here and replace this -->
-	<section style="text-align: center; max-width: 60ch; margin: 0 auto">
-		<h1>Mental Models Dev</h1>
-		<em>Loading…</em>
-	</section>
-</main>
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+		<main id="react-root">
+			<!-- React will render here and replace this -->
+			<section style="text-align: center; max-width: 60ch; margin: 0 auto">
+				<h1>Mental Models Dev</h1>
+				<em>Loading…</em>
+			</section>
+		</main>
 
-</body>
+	</body>
 </html>

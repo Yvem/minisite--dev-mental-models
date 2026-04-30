@@ -17,7 +17,7 @@
 			href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g id='layer-auto'><text y='.9em' font-size='90'>💡</text></g></svg>"
 		/>
 
-		<title>Mental Models Dev</title>
+		<title>Mental Models Dev - About</title>
 
 		<style>
 			/******* critical CSS https://www.smashingmagazine.com/2015/08/understanding-critical-css/ */
@@ -70,44 +70,15 @@
 				const locationᐧpathnameⵧfixed = location.pathname + '/'
 				history.replaceState(null, '', location.origin + locationᐧpathnameⵧfixed + location.search + location.hash)
 			})()
-			// for parcel serve which defaults every non-matching path to /index.html
-			if (location.hostname === 'localhost') {
-				;(function redirect_extensionless_known_pathes() {
-					if (location.redirect_pending) return
-					const pathname_without_leading_and_trailing_slash = location.pathname
-						.split('/')
-						.filter(s => !!s)
-						.join('/')
-					const trailing_path_segment = pathname_without_leading_and_trailing_slash.split('/').at(-1) || ''
-					if (!trailing_path_segment) {
-						return
-					}
-					const has_trailing_segment_an_extension = trailing_path_segment.split('.').length > 1
-					if (has_trailing_segment_an_extension) {
-						return
-					}
-					const locationᐧpathnameⵧfixed = '/' + pathname_without_leading_and_trailing_slash + '.html'
-					console.log('redirect_extensionless_known_pathes() REDIRECTING\u2026')
-					location.redirect_pending = true
-					location.replace(location.origin + locationᐧpathnameⵧfixed + location.search + location.hash)
-				})()
-			}
 		</script>
-		<script type="module" crossorigin src="./assets/index-GeeO40PA.js"></script>
-		<link rel="modulepreload" crossorigin href="./assets/src-CzcW9V64.js">
+		<script type="module" crossorigin src="./assets/src-CzcW9V64.js"></script>
 		<link rel="stylesheet" crossorigin href="./assets/src-DStiy9vI.css">
-		<link rel="stylesheet" crossorigin href="./assets/index-Bb-T-u53.css">
 	</head>
 
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<main id="react-root">
-			<!-- React will render here and replace this -->
-			<section style="text-align: center; max-width: 60ch; margin: 0 auto">
-				<h1>Mental Models Dev</h1>
-				<em>Loading…</em>
-			</section>
-		</main>
+		<h1>About Mental Models Dev</h1>
+		<p>TODO...</p>
 
 	</body>
 </html>

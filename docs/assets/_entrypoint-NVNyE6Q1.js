@@ -1,0 +1,1 @@
+import{n as e,t}from"./reducers-C6kAotFf.js";import{t as n}from"./index-GeeO40PA.js";var r=e(t(n),`AI Mental Models`);export{r as memeplex};
